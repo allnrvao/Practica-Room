@@ -1,3 +1,4 @@
+<!-- Encabezado Principal -->
 <p align="center">
   <img src="https://img.shields.io/badge/Kotlin-1.9+-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
   <img src="https://img.shields.io/badge/Jetpack_Compose-334D5C?style=for-the-badge&logo=jetpackcompose&logoColor=61D9FA" alt="Compose">
@@ -70,28 +71,29 @@ La aplicación se rige bajo la arquitectura **MVVM (Model-View-ViewModel)** y bu
   <tr>
     <td align="center" width="33%">
       <b>🔑 Inicio de Sesión</b><br><br>
-      <img src="image_ee791f.png" width="230" alt="Login">
+      <img src="captura/Screenshot 2026-06-04 140716.png" width="230" alt="Login">
     </td>
     <td align="center" width="33%">
       <b>📊 Dashboard Principal</b><br><br>
-      <img src="image_ee78c3.png" width="230" alt="Dashboard">
+      <img src="captura/Screenshot 2026-06-04 140741.png" width="230" alt="Dashboard">
     </td>
     <td align="center" width="33%">
       <b>💻 Gestión de Equipos</b><br><br>
-      <img src="image_ee7886.png" width="230" alt="Inventario">
+      <img src="captura/Screenshot 2026-06-04 140802.png" width="230" alt="Inventario">
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
-      <br><b>📦 Registro e Historial</b><br><br>
-      <img src="image_ee757e.png" width="230" alt="Historial">
+      <br><b>📦 Historial</b><br><br>
+      <img src="captura/Screenshot 2026-06-04 140905.png" width="230" alt="Historial">
     </td>
     <td align="center" width="33%">
-      <br><b>📈 Reportes y Estadísticas</b><br><br>
-      <img src="image_ee7541.png" width="230" alt="Reportes">
+      <br><b>📈 Reportes</b><br><br>
+      <img src="captura/Screenshot 2026-06-04 140905.png" width="230" alt="Reportes">
     </td>
     <td align="center" width="33%">
-      </td>
+      <!-- Espacio vacío por simetría visual -->
+    </td>
   </tr>
 </table>
 
