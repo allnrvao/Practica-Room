@@ -1,3 +1,7 @@
+
+
+
+![Uploading Screenshot 2026-06-04 140716.png…]()
 <!-- Encabezado Principal -->
 <p align="center">
   <img src="https://img.shields.io/badge/Kotlin-1.9+-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
@@ -71,26 +75,25 @@ La aplicación se rige bajo la arquitectura **MVVM (Model-View-ViewModel)** y bu
   <tr>
     <td align="center" width="33%">
       <b>🔑 Inicio de Sesión</b><br><br>
-      <img src="captura/Screenshot%202026-06-04%20140716.png" width="230" alt="Login">
+      <img width="362" height="377" alt="Screenshot 2026-06-04 140716" src="https://github.com/user-attachments/assets/7134f7e1-a89b-470d-be94-66da4a9aa1e3" />
     </td>
     <td align="center" width="33%">
       <b>📊 Dashboard Principal</b><br><br>
-      <img src="captura/Screenshot%202026-06-04%20140741.png" width="230" alt="Dashboard">
+      <img width="363" height="489" alt="Screenshot 2026-06-04 140741" src="https://github.com/user-attachments/assets/8e1de678-f205-4413-bfd4-cb36a0029f98" />
     </td>
     <td align="center" width="33%">
       <b>💻 Gestión de Equipos</b><br><br>
-      <img src="captura/Screenshot%202026-06-04%20140802.png" width="230" alt="Inventario">
+      <img width="352" height="519" alt="Screenshot 2026-06-04 140802" src="https://github.com/user-attachments/assets/8a05056c-9cd9-4c1f-9c94-1e1fea1c9362" />
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <br><b>📦 Historial</b><br><br>
-      <img src="captura/Screenshot%202026-06-04%20140842.png" width="230" alt="Historial">
+      <img width="353" height="385" alt="Screenshot 2026-06-04 140905" src="https://github.com/user-attachments/assets/043717ea-097d-4927-bf30-4b16bad55ef6" />
     </td>
     <td align="center" width="33%">
       <br><b>📈 Reportes</b><br><br>
-      <img src="captura/Screenshot%202026-06-04%20140905.png" width="230" alt="Reportes">
-    </td>
+      <img width="354" height="480" alt="Screenshot 2026-06-04 140847" src="https://github.com/user-attachments/assets/c3ac70e9-d4a0-4b45-894a-627ee1fce836" />
     <td align="center" width="33%">
       </td>
   </tr>
