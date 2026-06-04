@@ -1,56 +1,41 @@
-package ni.edu.uam.inventariomanager.database
+package ni.edu.uam.inventariomanager.repository
 
-import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
-import ni.edu.uam.inventariomanager.dao.AdministradorDao
+import kotlinx.coroutines.flow.Flow
 import ni.edu.uam.inventariomanager.dao.EquipoDao
-import ni.edu.uam.inventariomanager.dao.PrestamoDao
-import ni.edu.uam.inventariomanager.model.Administrador
 import ni.edu.uam.inventariomanager.model.Equipo
-import ni.edu.uam.inventariomanager.model.Prestamo
 
-@Database(
-    entities = [
-        Equipo::class,
-        Prestamo::class,
-        Administrador::class
-    ],
-    version = 1,
-    exportSchema = false
-)
-abstract class AppDatabase : RoomDatabase() {
+class EquipoRepository(
+    private val equipoDao: EquipoDao
+) {
 
-    abstract fun equipoDao(): EquipoDao
+    val equipos: Flow<List<Equipo>> =
+        equipoDao.obtenerTodos()
 
-    abstract fun prestamoDao(): PrestamoDao
+    fun buscar(texto: String): Flow<List<Equipo>> {
+        return equipoDao.buscar(texto)
+    }
 
-    abstract fun administradorDao(): AdministradorDao
+    fun filtrarCategoria(categoria: String): Flow<List<Equipo>> {
+        return equipoDao.filtrarPorCategoria(categoria)
+    }
 
-    companion object {
+    fun obtenerDisponibles(): Flow<List<Equipo>> {
+        return equipoDao.obtenerDisponibles()
+    }
 
-        @Volatile
-        private var INSTANCE: AppDatabase? = null
+    suspend fun obtenerPorId(id: Int): Equipo? {
+        return equipoDao.obtenerPorId(id)
+    }
 
-        fun obtenerBaseDatos(
-            context: Context
-        ): AppDatabase {
+    suspend fun insertar(equipo: Equipo) {
+        equipoDao.insertar(equipo)
+    }
 
-            return INSTANCE ?: synchronized(this) {
+    suspend fun actualizar(equipo: Equipo) {
+        equipoDao.actualizar(equipo)
+    }
 
-                val instancia = Room.databaseBuilder(
-                    context.applicationContext,
-                    AppDatabase::class.java,
-                    "inventario_db"
-                )
-                    .fallbackToDestructiveMigration()
-                    .build()
-
-                INSTANCE = instancia
-
-                instancia
-            }
-        }
+    suspend fun eliminar(equipo: Equipo) {
+        equipoDao.eliminar(equipo)
     }
 }

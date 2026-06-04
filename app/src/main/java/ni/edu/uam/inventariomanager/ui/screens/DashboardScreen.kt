@@ -1,147 +1,147 @@
 package ni.edu.uam.inventariomanager.ui.screens
 
-class DashboardScreen {
-}package ni.edu.uam.inventariomanager.ui.screens
-
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import ni.edu.uam.inventariomanager.ui.components.DashboardCard
 import ni.edu.uam.inventariomanager.viewmodel.DashboardViewModel
 
 @Composable
 fun DashboardScreen(
-
     dashboardViewModel: DashboardViewModel,
-
     irListaEquipos: () -> Unit,
-
     irPrestamos: () -> Unit,
-
     irHistorial: () -> Unit,
-
     irReportes: () -> Unit
-
 ) {
 
-    val dashboard by
-    dashboardViewModel.dashboard.collectAsStateWithLifecycle()
-
-    LazyColumn(
-
+    Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(12.dp),
+            .padding(16.dp),
 
-        verticalArrangement =
-            Arrangement.spacedBy(10.dp)
-
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
 
-        item {
+        Text(
+            text = "Dashboard",
+            style = MaterialTheme.typography.headlineMedium
+        )
 
-            DashboardCard(
-
-                titulo = "Total de equipos",
-
-                valor = dashboard.totalEquipos
-
-            )
-
-        }
-
-        item {
-
-            DashboardCard(
-
-                titulo = "Equipos disponibles",
-
-                valor = dashboard.disponibles
-
-            )
-
-        }
-
-        item {
-
-            DashboardCard(
-
-                titulo = "Equipos prestados",
-
-                valor = dashboard.prestados
-
-            )
-
-        }
-
-        item {
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            elevation = CardDefaults.cardElevation(5.dp)
+        ) {
 
             Column(
-
-                verticalArrangement =
-                    Arrangement.spacedBy(10.dp)
-
+                modifier = Modifier.padding(16.dp)
             ) {
 
-                androidx.compose.material3.Button(
+                Text(
+                    text = "Gestión de Equipos"
+                )
 
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
                     onClick = irListaEquipos
-
                 ) {
 
-                    androidx.compose.material3.Text(
-
-                        "Gestión de Equipos"
-
+                    Text(
+                        text = "Ver Inventario"
                     )
 
                 }
 
-                androidx.compose.material3.Button(
+            }
 
+        }
+
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            elevation = CardDefaults.cardElevation(5.dp)
+        ) {
+
+            Column(
+                modifier = Modifier.padding(16.dp)
+            ) {
+
+                Text(
+                    text = "Préstamos"
+                )
+
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
                     onClick = irPrestamos
-
                 ) {
 
-                    androidx.compose.material3.Text(
-
-                        "Registrar préstamo"
-
+                    Text(
+                        text = "Registrar Préstamo"
                     )
 
                 }
 
-                androidx.compose.material3.Button(
+            }
 
+        }
+
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            elevation = CardDefaults.cardElevation(5.dp)
+        ) {
+
+            Column(
+                modifier = Modifier.padding(16.dp)
+            ) {
+
+                Text(
+                    text = "Historial"
+
+                )
+
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
                     onClick = irHistorial
-
                 ) {
 
-                    androidx.compose.material3.Text(
-
-                        "Historial"
-
+                    Text(
+                        text = "Ver Historial"
                     )
 
                 }
 
-                androidx.compose.material3.Button(
+            }
 
+        }
+
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            elevation = CardDefaults.cardElevation(5.dp)
+        ) {
+
+            Column(
+                modifier = Modifier.padding(16.dp)
+            ) {
+
+                Text(
+                    text = "Reportes"
+                )
+
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
                     onClick = irReportes
-
                 ) {
 
-                    androidx.compose.material3.Text(
-
-                        "Reportes"
-
+                    Text(
+                        text = "Generar Reportes"
                     )
 
                 }

@@ -1,6 +1,7 @@
 package ni.edu.uam.inventariomanager.repository
 
 import ni.edu.uam.inventariomanager.dao.EquipoDao
+import ni.edu.uam.inventariomanager.model.Dashboard
 
 class DashboardRepository(
     private val equipoDao: EquipoDao
@@ -21,6 +22,16 @@ class DashboardRepository(
     suspend fun totalPrestados(): Int {
 
         return equipoDao.totalPrestados()
+
+    }
+
+    suspend fun obtenerDashboard(): Dashboard {
+
+        return Dashboard(
+            totalEquipos = totalEquipos(),
+            disponibles = totalDisponibles(),
+            prestados = totalPrestados()
+        )
 
     }
 

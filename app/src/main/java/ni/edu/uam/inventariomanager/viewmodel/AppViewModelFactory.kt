@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import ni.edu.uam.inventariomanager.repository.AdministradorRepository
 import ni.edu.uam.inventariomanager.repository.DashboardRepository
-import ni.edu.uam.inventariomanager.repository.EquipoRepository
 import ni.edu.uam.inventariomanager.repository.PrestamoRepository
+import ni.edu.uam.inventariomanager.repository.EquipoRepository
 
 class AppViewModelFactory(
     private val equipoRepository: EquipoRepository,

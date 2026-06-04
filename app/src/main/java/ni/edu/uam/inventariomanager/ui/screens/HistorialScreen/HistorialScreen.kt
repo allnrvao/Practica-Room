@@ -1,6 +1,10 @@
 package ni.edu.uam.inventariomanager.ui.screens
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
@@ -73,6 +77,95 @@ fun HistorialScreen(
                 }
 
             )
+
+        }
+
+    }
+
+}
+
+@Composable
+fun PrestamoCard(
+
+    prestamo: Prestamo,
+
+    onDevolver: () -> Unit
+
+) {
+
+    Card(
+
+        modifier = Modifier.fillMaxWidth()
+
+    ) {
+
+        Column(
+
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+
+            verticalArrangement =
+                Arrangement.spacedBy(8.dp)
+
+        ) {
+
+            Text(
+
+                text =
+                    "Equipo ID: ${prestamo.equipoId}",
+
+                style =
+                    MaterialTheme.typography.titleMedium
+
+            )
+
+            Text(
+
+                text =
+                    "Solicitante: ${prestamo.solicitante}"
+
+            )
+
+            Text(
+
+                text =
+                    "Fecha de préstamo: ${prestamo.fechaPrestamo}"
+
+            )
+
+            Text(
+
+                text =
+                    "Fecha de devolución: ${
+                        prestamo.fechaDevolucion
+                            ?: "Pendiente"
+                    }"
+
+            )
+
+            if (
+
+                prestamo.fechaDevolucion == null
+
+            ) {
+
+                Button(
+
+                    onClick = onDevolver
+
+                ) {
+
+                    Text(
+
+                        text =
+                            "Registrar devolución"
+
+                    )
+
+                }
+
+            }
 
         }
 

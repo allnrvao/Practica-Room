@@ -7,26 +7,48 @@ import ni.edu.uam.inventariomanager.model.Administrador
 interface AdministradorDao {
 
     @Insert
-    suspend fun insertar(administrador: Administrador)
+    suspend fun insertar(
+        administrador: Administrador
+    )
 
     @Update
-    suspend fun actualizar(administrador: Administrador)
+    suspend fun actualizar(
+        administrador: Administrador
+    )
 
     @Delete
-    suspend fun eliminar(administrador: Administrador)
+    suspend fun eliminar(
+        administrador: Administrador
+    )
 
-    @Query("""
+    @Query(
+        """
         SELECT *
         FROM administradores
         WHERE usuario = :usuario
         AND password = :password
         LIMIT 1
-    """)
+        """
+    )
     suspend fun login(
         usuario: String,
         password: String
     ): Administrador?
 
-    @Query("SELECT * FROM administradores")
+    @Query(
+        """
+        SELECT *
+        FROM administradores
+        WHERE usuario = :usuario
+        LIMIT 1
+        """
+    )
+    suspend fun buscarPorUsuario(
+        usuario: String
+    ): Administrador?
+
+    @Query(
+        "SELECT * FROM administradores"
+    )
     suspend fun obtenerTodos(): List<Administrador>
 }

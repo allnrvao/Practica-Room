@@ -7,7 +7,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import kotlinx.coroutines.flow.StateFlow
+import ni.edu.uam.inventariomanager.model.Dashboard
 import ni.edu.uam.inventariomanager.ui.components.DashboardCard
 import ni.edu.uam.inventariomanager.viewmodel.DashboardViewModel
 
@@ -18,8 +19,7 @@ fun ReporteScreen(
 
 ) {
 
-    val dashboard by
-    dashboardViewModel.dashboard.collectAsStateWithLifecycle()
+    val dashboard: Dashboard by dashboardViewModel.dashboard.collectAsState()
 
     Column(
 
