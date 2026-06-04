@@ -71,29 +71,28 @@ La aplicación se rige bajo la arquitectura **MVVM (Model-View-ViewModel)** y bu
   <tr>
     <td align="center" width="33%">
       <b>🔑 Inicio de Sesión</b><br><br>
-      <img src="captura/Screenshot 2026-06-04 140716.png" width="230" alt="Login">
+      <img src="captura/Screenshot%202026-06-04%20140716.png" width="230" alt="Login">
     </td>
     <td align="center" width="33%">
       <b>📊 Dashboard Principal</b><br><br>
-      <img src="captura/Screenshot 2026-06-04 140741.png" width="230" alt="Dashboard">
+      <img src="captura/Screenshot%202026-06-04%20140741.png" width="230" alt="Dashboard">
     </td>
     <td align="center" width="33%">
       <b>💻 Gestión de Equipos</b><br><br>
-      <img src="captura/Screenshot 2026-06-04 140802.png" width="230" alt="Inventario">
+      <img src="captura/Screenshot%202026-06-04%20140802.png" width="230" alt="Inventario">
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <br><b>📦 Historial</b><br><br>
-      <img src="captura/Screenshot 2026-06-04 140905.png" width="230" alt="Historial">
+      <img src="captura/Screenshot%202026-06-04%20140842.png" width="230" alt="Historial">
     </td>
     <td align="center" width="33%">
       <br><b>📈 Reportes</b><br><br>
-      <img src="captura/Screenshot 2026-06-04 140905.png" width="230" alt="Reportes">
+      <img src="captura/Screenshot%202026-06-04%20140905.png" width="230" alt="Reportes">
     </td>
     <td align="center" width="33%">
-      <!-- Espacio vacío por simetría visual -->
-    </td>
+      </td>
   </tr>
 </table>
 
